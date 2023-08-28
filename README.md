@@ -2,6 +2,18 @@
 
 ISO 8601 Time parser (not date, nor duration)
 
+## Installation
+
+```bash
+npm i iso-time-parser
+```
+
+## Usage
+
+```typescript
+import { ... } from 'iso-time-parser';
+```
+
 ## Development
 
 **Install deps**
