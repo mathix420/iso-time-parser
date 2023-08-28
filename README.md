@@ -1,6 +1,6 @@
 # iso-time-parser
 
-ISO 8601 Time parser (not date, nor duration)
+[ISO 8601](https://www.wikiwand.com/fr/ISO_8601) Time parser (not date, nor duration)
 
 ## Installation
 

@@ -6,6 +6,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
   "exports": {
     "require": {
       "types": "./dist/index.d.cts",
@@ -17,7 +20,8 @@
     }
   },
   "scripts": {
-    "build": "pkgroll"
+    "dev": "pkgroll --watch",
+    "build": "pkgroll --target=node16"
   },
   "repository": {
     "type": "git",
