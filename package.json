@@ -1,6 +1,6 @@
 {
   "name": "iso-time-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ISO 8601 Time parser (not date, nor duration)",
   "type": "module",
   "main": "./dist/index.js",
