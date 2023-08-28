@@ -1,0 +1,48 @@
+{
+  "name": "iso-time-parser",
+  "version": "1.0.0",
+  "description": "ISO 8601 Time parser (not date, nor duration)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "pkgroll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mathix420/iso-time-parser.git"
+  },
+  "keywords": [
+    "ISO 8601",
+    "typescript",
+    "javascript",
+    "time parser",
+    "time"
+  ],
+  "author": "Arnaud GISSINGER",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mathix420/iso-time-parser/issues"
+  },
+  "homepage": "https://github.com/mathix420/iso-time-parser#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "pkgroll": "^1.11.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.2.2"
+  }
+}
