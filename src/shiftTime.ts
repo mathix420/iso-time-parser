@@ -10,7 +10,7 @@ import { ParseResponse } from './parse';
  * @returns The shifted time object
  */
 export function shiftTime(parsedTime: ParseResponse, offsetMinutes: number): ParseResponse {
-    const shift = offsetMinutes - parsedTime.shiftInMinutes;
+    const shift = parsedTime.shiftInMinutes - offsetMinutes;
     const minutesRaw = parsedTime.minutes + (shift % 60);
     const nbHours = minutesRaw / 60;
 

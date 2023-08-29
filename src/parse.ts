@@ -74,7 +74,7 @@ export function parseSync(
     return {
         ...result,
         shiftInMinutes:
-            (result.rawShift.hours * 60 + result.rawShift.minutes) * result.rawShift.sign,
+            (result.rawShift.hours * 60 + result.rawShift.minutes) * result.rawShift.sign * -1,
     };
 }
 
