@@ -14,11 +14,22 @@ export type ParseResponse = {
     shiftInMinutes: number;
 };
 
+/**
+ * On default behavior, this function will return `null` in case of parsing failure.
+ *
+ * If `strict` is set to `true` then this function will fail if an implicit time offset is given.
+ *
+ * If `raise` is set to `true` then this function will throw and error when a failure occurs.
+ * @param isoString ISO 8601 time string
+ * @param options
+ * @returns The parsed response
+ */
 export function parseSync(
     isoString: string,
-    { strict = false, raise = false },
+    options: { strict?: boolean; raise?: boolean },
 ): ParseResponse | null {
     const match = parsingRegex.exec(isoString);
+    const { strict = false, raise = false } = options || {};
 
     if (!match?.groups) {
         if (raise) {
@@ -67,10 +78,18 @@ export function parseSync(
     };
 }
 
-export function parse(isoString: string) {
+/**
+ * On default behavior, this function will return `null` in case of parsing failure.
+ *
+ * This function uses `parseSync` under the hood.
+ * @param isoString ISO 8601 time string
+ * @param strict If set to `true` this function will fail if an implicit time offset is given
+ * @returns Promise returning either the parsed response or an error message
+ */
+export function parse(isoString: string, strict: boolean = false) {
     return new Promise<ParseResponse>((resolve, reject) => {
         try {
-            resolve(parseSync(isoString, { raise: true }) as ParseResponse);
+            resolve(parseSync(isoString, { raise: true, strict }) as ParseResponse);
         } catch (error) {
             reject(error);
         }
