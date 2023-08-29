@@ -12,6 +12,10 @@ npm i iso-time-parser
 
 ## Usage/Example
 
+[Full Documentation](https://mathix420.github.io/iso-time-parser/)
+
+**Example:**
+
 ```typescript
 import { parse, toLocalTime, toUTC } from 'iso-time-parser';
 
