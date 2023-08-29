@@ -1,5 +1,14 @@
 import { ParseResponse } from './parse';
 
+/**
+ * Will apply the given time shift to a parsed time object.
+ *
+ * Useful when you have times in different timezones.
+ *
+ * @param parsedTime Parsed time object you want to apply the time shift to
+ * @param offsetMinutes Offset in minutes (can be negative as well)
+ * @returns The shifted time object
+ */
 export function shiftTime(parsedTime: ParseResponse, offsetMinutes: number): ParseResponse {
     const shift = offsetMinutes + parsedTime.shiftInMinutes;
     const utcMinutesRaw = parsedTime.minutes - (shift % 60);
