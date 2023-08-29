@@ -76,3 +76,21 @@ npm i
 ```bash
 npm run build
 ```
+
+**Build docs**
+
+```bash
+npx typedoc src/index.ts
+```
+
+**Bump version**
+
+```bash
+npm version {major, minor, patch}
+```
+
+**Publish**
+
+```bash
+npm publish --access public
+```
